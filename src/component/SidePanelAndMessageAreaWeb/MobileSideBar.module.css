@@ -1,0 +1,102 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+
+  display: flex;
+}
+
+.SidePanel {
+  position: relative;
+  flex-grow: 1;
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  max-height: 100vh; /* Limit the height of the container to the viewport height */
+  background: #FFFFFF;
+}
+
+.headingBox {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  text-align: center;
+  height: 10vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+}
+.GroupList {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  height: calc(100vh - 10vh - 93px); /* Subtract the height of headingBox and bottomButton from the viewport height */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+
+
+.GroupItem.selected {
+    border-radius: 22px 0px 0px 22px;
+    background-color: #f7ecdc;
+  }
+  .GroupItem:hover {
+    border-radius: 22px 0px 0px 22px;
+    background-color: #f7ecdc;
+  }
+.groupIcon {
+  margin-left: 10px;
+  width: 68px;
+  height: 68px;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: burlywood;
+}
+
+.GroupItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  gap: 1.5rem;
+}
+
+.groupName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+.bottomButton {
+  position: sticky;
+  bottom: 30px; /* Adjust to match the height of the button */
+  width: 93px; /* Adjust button width to fit panel */
+  height: 93px;
+  background-color: #16008b; /* Example button background color */
+  color: #fff; /* Example button text color */
+  border: none;
+  border-radius: 50px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 0; /* Ensure it stays above other content */
+  left: 260px
+}
+

@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  display: flex;
+}
+
+.leftSidePanel {
+  position: relative;
+  flex-grow: 1;
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  max-height: 100vh; /* Limit the height of the container to the viewport height */
+  background: #FFFFFF;
+}
+
+.headingBox {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  text-align: center;
+}
+
+.heading {
+  padding: 2rem;
+  color: #000;
+  font-family: Roboto;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.63px;
+}
+
+.GroupList {
+  display: flex;
+  flex-direction: column;
+}
+
+.GroupItem.selected {
+  border-radius: 22px 0px 0px 22px;
+  background-color: #f7ecdc;
+}
+.GroupItem:hover {
+  border-radius: 22px 0px 0px 22px;
+  background-color: #f7ecdc;
+}
+
+.groupIcon {
+  margin-left: 10px;
+  width: 68px;
+  height: 68px;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: burlywood;
+}
+
+.GroupItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  gap: 1.5rem;
+}
+
+.groupName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+
+.bottomButton {
+  position: sticky;
+  bottom: 40px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed to position it to the right */
+  width: 93px; /* Adjust button width to fit panel */
+  height: 93px;
+  left: 325px;
+  background-color: #16008b; /* Example button background color */
+  color: #fff; /* Example button text color */
+  border: none;
+  border-radius: 50px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 2; /* Ensure it stays above other content */
+}
+
+.notesHeader {
+  height: 10vh;
+  width: 70vw;
+  background: #001f8b;
+  display: flex;
+  align-items: center;
+  padding: 2.65rem 1.5rem;
+  gap: 1rem;
+}
+
+.notesGroup {
+  /* margin-left: 10px; */
+  width: 68px;
+  height: 68px;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+.groupNameMessageArea {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.NotesList {
+  height: 60vh;
+  width: 70vw;
+  background: #dae5f5;
+  /* margin-top: 1rem; */
+  padding-top: 1rem;
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  max-height: 60vh; /* Limit the height of the container to the viewport height */
+}
+.selectedGroupArea {
+  display: block;
+}
+
+.Text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.035em;
+  text-align: left;
+  color: #000000;
+}
+
+.NotesArea {
+  display: block;
+}
+
+.NotesItem {
+  position: relative;
+  background: #ffffff;
+  margin: 0rem 2rem 1rem 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+.NotesAndDate {
+  position: absolute; /* Change to absolute positioning */
+  bottom: 10px; /* Adjust as needed */
+  right: 25px; /* Adjust as needed */
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dotImage {
+  height: 8px;
+  width: 8px;
+}
+
+.Textarea {
+  background: #001f8b;
+  width: 70vw;
+  height: 30vh;
+  border-radius: 8px;
+}
+
+.TextInput {
+  margin: 1.1rem 2rem 1.1rem 2rem;
+  height: 22vh;
+  width: 65vw;
+  resize: none;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.TextInput::placeholder {
+  color: #9a9a9a;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.596px;
+}
+.SendImgButton {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.SendImg {
+  height: auto;
+  width: 1.8rem;
+}
+
+span {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #353535;
+}
+
+.MessageArea {
+  background: #dae5f5;
+  width: 70vw;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MessageAreaHeading {
+  color: #000;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.MessageAreaDescription {
+  color: #292929;
+  margin-top: 0;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.44px;
+}
+.MessageAreaFooter {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 32%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footerText {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Adjust as needed for thickness */
+  height: 8px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Change scrollbar track color to white */
+  margin: 10px;
+  border-radius: 8px;
+  height: 2px;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Change scrollbar thumb color to black */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  width: 5px; /* Adjust width of the scrollbar thumb */
+  height: 5px; /* Adjust height of the scrollbar thumb */
+}

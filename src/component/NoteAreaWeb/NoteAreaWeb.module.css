@@ -1,0 +1,134 @@
+.notesHeader {
+    height: 10vh;
+    width: 70vw;
+    background: #001f8b;
+    display: flex;
+    align-items: center;
+    padding: 2.65rem 1.5rem;
+    gap: 1rem;
+  }
+  
+  .notesGroup {
+    /* margin-left: 10px; */
+    width: 68px;
+    height: 68px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #000;
+  }
+  .groupNameMessageArea {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  
+    color: #ffffff;
+  }
+  
+  .NotesList {
+    height: 60vh;
+    width: 70vw;
+    background: #dae5f5;
+    /* margin-top: 1rem; */
+    padding-top: 1rem;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    max-height: 60vh; /* Limit the height of the container to the viewport height */
+  }
+  .selectedGroupArea {
+    display: block;
+  }
+  
+  .Text {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .NotesArea {
+    display: block;
+  }
+  
+  .NotesItem {
+    position: relative;
+    background: #ffffff;
+    margin: 0rem 2rem 1rem 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  }
+  
+  .NotesAndDate {
+    position: absolute; /* Change to absolute positioning */
+    bottom: 10px; /* Adjust as needed */
+    right: 25px; /* Adjust as needed */
+  
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .dotImage {
+    height: 8px;
+    width: 8px;
+  }
+  
+  .Textarea {
+    background: #001f8b;
+    width: 70vw;
+    /* height: 30vh; */
+    border-radius: 8px;
+  }
+  
+  .TextInput {
+    margin: 1.1rem 2rem 1.1rem 2rem;
+    height: 22vh;
+    width: 65vw;
+    resize: none;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .TextInput::placeholder {
+    color: #9a9a9a;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.596px;
+  }
+  .SendImgButton {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  .SendImg {
+    height: auto;
+    width: 1.8rem;
+  }
+  
+  span {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #353535;
+  }
+  
