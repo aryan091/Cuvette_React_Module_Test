@@ -74,8 +74,9 @@ const MobileNotesArea = ({ selectGroup,
     });
 
     currentGroup["notes"].push({ date, time, note });
-    localStorage.setItem("groups", JSON.stringify(newGroup));
     setGroups(newGroup);
+
+    localStorage.setItem("groups", JSON.stringify(newGroup));
     setNote("");
   };
 
