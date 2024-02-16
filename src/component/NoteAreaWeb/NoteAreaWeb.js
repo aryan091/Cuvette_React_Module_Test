@@ -73,6 +73,7 @@ function NoteAreaWeb(props) {
 
     localStorage.setItem("groups", JSON.stringify(newGroup));
     setNote('');
+    setDisabled(true);
   };
 
   const keypress = (e) => {
