@@ -235,14 +235,20 @@ span {
 }
 
 .MessageArea {
-  /* background: #dae5f5; */
   width: 70vw;
   display: flex;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
+
+.withBackground {
+  background: #dae5f5;
+}
+
+
 
 .MessageAreaHeading {
   color: #000;

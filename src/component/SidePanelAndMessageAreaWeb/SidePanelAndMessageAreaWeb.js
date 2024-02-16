@@ -116,7 +116,7 @@ function SidePanel() {
                 />
               )}
 
-              <div className={style.MessageArea}>
+              <div className={`${style.MessageArea} ${selectGroup ? '' : style.withBackground}`}>
                 {selectGroup ? (
                   <NoteAreaWeb
                     selectGroup={selectGroup}
