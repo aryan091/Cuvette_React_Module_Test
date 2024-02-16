@@ -116,7 +116,7 @@ function SidePanel() {
                 />
               )}
 
-              <div className={style.MessageArea}>
+              <div >
                 {selectGroup ? (
                   <NoteAreaWeb
                     selectGroup={selectGroup}
