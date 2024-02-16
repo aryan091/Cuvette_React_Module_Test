@@ -89,7 +89,7 @@ const MobileNotesArea = ({ selectGroup,
   };
   return (
     <>
-    <div className={styles.MessageAreaMobile}>
+    <div >
       <div className={styles.selectedGroupArea}>
 
         <div className={styles.notesHeader}>

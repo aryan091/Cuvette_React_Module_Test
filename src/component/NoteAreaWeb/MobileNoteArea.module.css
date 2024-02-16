@@ -7,7 +7,7 @@
   .container {
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden; 
     display: flex;
   }
   
@@ -30,7 +30,7 @@
   .MessageAreaMobile {
     background-color: burlywood;
     width: 100vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
   }
@@ -299,7 +299,7 @@
     background: #dae5f5;
     /* margin-top: 1rem; */
     padding-top: 1rem;
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    overflow-y: auto; 
     max-height: 67vh; /* Limit the height of the container to the viewport height */
   }
   .selectedGroupArea {
