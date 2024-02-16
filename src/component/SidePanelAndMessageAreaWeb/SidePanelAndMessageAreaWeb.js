@@ -88,9 +88,10 @@ function SidePanel() {
                         style={{ background: group.color }}
                       >
                         {group.groupName
-                          ?.split(" ")
-                          .map((word) => word[0]?.toUpperCase())
-                          .join("")}
+                    ?.split(" ")
+                    .slice(0,2)
+                    .map((word) => word[0]?.toUpperCase())
+                    .join("")}
                       </div>
                       <h2 className={style.groupName}>{group.groupName}</h2>
                     </div>

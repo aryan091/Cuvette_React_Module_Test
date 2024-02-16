@@ -75,6 +75,7 @@ const MobileSidebar = (
                 <div className={styles.groupIcon} style={{ background: group.color }}>
                   {group.groupName
                     ?.split(" ")
+                    .slice(0,2)
                     .map((word) => word[0]?.toUpperCase())
                     .join("")}
                 </div>
