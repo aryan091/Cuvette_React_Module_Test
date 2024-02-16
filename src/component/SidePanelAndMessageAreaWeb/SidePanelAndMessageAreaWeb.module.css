@@ -235,7 +235,7 @@ span {
 }
 
 .MessageArea {
-  background: #dae5f5;
+  /* background: #dae5f5; */
   width: 70vw;
   display: flex;
   height: 100vh;
