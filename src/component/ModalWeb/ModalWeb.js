@@ -3,6 +3,7 @@ import styles from "./ModalWeb.module.css";
 
 function ModalWeb(props) {
   const [formData, setFormData] = useState({ grpName: "", color: "" });
+  
   const setGroups = props.setGroups;
   const groups = props.groups;
   const closeModal = props.closeModal;
