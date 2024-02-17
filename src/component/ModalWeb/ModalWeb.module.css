@@ -253,3 +253,16 @@
   left: 45px;
   top: 10px;
 }
+
+.error {
+  color: red;
+}
+
+.errorButton {
+  border-color: red;
+  background-color: #ffe5e5;
+  color: red;
+}
+.modalText.error {
+  border-color: red;
+}

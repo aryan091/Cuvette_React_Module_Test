@@ -3,7 +3,8 @@ import styles from "./ModalWeb.module.css";
 
 function ModalWeb(props) {
   const [formData, setFormData] = useState({ grpName: "", color: "" });
-  
+  const [error, setError] = useState("");
+
   const setGroups = props.setGroups;
   const groups = props.groups;
   const closeModal = props.closeModal;
@@ -38,23 +39,26 @@ function ModalWeb(props) {
   }, []);
 
   const handleChange = (event) => {
-    event.preventDefault();
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    setError("");
   };
 
   const handleChangeColor = (event) => {
-    event.preventDefault();
     setFormData({
       ...formData,
       [event.target.name]: event.target.getAttribute("color"),
     });
+    setError("");
   };
 
   const handleSubmit = (event) => {
-    if (formData.color === "") {
-      alert("Please select a color");
+    event.preventDefault();
+
+    if (formData.grpName.trim() === "" || formData.color === "") {
+      setError("Please fill out all fields");
       return;
     }
+
     let newGroup = [
       ...groups,
       {
@@ -96,7 +100,7 @@ function ModalWeb(props) {
               <label className={styles.modalGrpMobile}>Group Name</label>
               <input
                 type="text"
-                className={styles.modalTextMobile}
+                className={`${styles.modalTextMobile} ${error && styles.error}`}
                 name="grpName"
                 placeholder="Enter your group name"
                 onChange={handleChange}
@@ -128,7 +132,7 @@ function ModalWeb(props) {
                 ))}
               </div>
             </div>
-            <button className={styles.modalCreateMobile} onClick={handleSubmit}>
+            <button className={`${styles.modalCreateMobile} ${error && styles.errorButton}`} onClick={handleSubmit}>
               Create
             </button>
           </div>
@@ -152,7 +156,7 @@ function ModalWeb(props) {
               <label className={styles.modalGrp}>Group Name</label>
               <input
                 type="text"
-                className={styles.modalText}
+                className={`${styles.modalText} ${error && styles.error}`}
                 name="grpName"
                 placeholder="Enter your group name"
                 onChange={handleChange}
@@ -185,7 +189,7 @@ function ModalWeb(props) {
                 ))}
               </div>
             </div>
-            <button className={styles.modalCreate} onClick={handleSubmit}>
+            <button className={`${styles.modalCreate} ${error && styles.errorButton}`} onClick={handleSubmit}>
               Create
             </button>
           </div>
